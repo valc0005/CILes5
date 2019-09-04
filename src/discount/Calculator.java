@@ -5,12 +5,19 @@ import com.hz.ShoppingCart;
 
 public class Calculator {
 
-    // accepteert productarray
-    Product[] _products;
+    private Context _context;
+
+    public Calculator(Context context) {
+        _context = context;
+    }
 
     // berekent totale korting
     public double getTotalDiscount(ShoppingCart shoppingCart) {
-        return shoppingCart.getTotalPrice() * 0.8;
+        if (_context.getIsAfterEight()) {
+            return shoppingCart.getTotalPrice();
+        } else {
+            return shoppingCart.getTotalPrice() * 0.8;
+        }
     }
 
 }

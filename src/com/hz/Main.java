@@ -1,6 +1,7 @@
 package com.hz;
 
 import discount.Calculator;
+import discount.Context;
 
 public class Main {
 
@@ -11,7 +12,9 @@ public class Main {
         // Apple syrup
         Product appleSyrup = new AppleSyrup(2);
 
-        Calculator calc = new Calculator();
+        Context context = new Context(true);
+
+        Calculator calc = new Calculator(context);
 
         ShoppingCart shoppingCart = new ShoppingCart();
 
