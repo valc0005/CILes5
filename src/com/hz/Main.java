@@ -11,8 +11,12 @@ public class Main {
         Product butter = new Butter(1);
         // Apple syrup
         Product appleSyrup = new AppleSyrup(2);
+        // Toothpaste
+        Product toothPaste = new ToothPaste(1.5);
+        // Bread
+        Product bread = new Bread(1.1);
 
-        Context context = new Context(true);
+        Context context = new Context(false);
 
         Calculator calc = new Calculator(context);
 
@@ -21,6 +25,10 @@ public class Main {
         shoppingCart.addToCart(butter);
 
         shoppingCart.addToCart(appleSyrup);
+
+        shoppingCart.addToCart(toothPaste);
+
+        shoppingCart.addToCart(bread);
 
         double discount = calc.getTotalDiscount(shoppingCart);
 

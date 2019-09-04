@@ -1,6 +1,5 @@
 package discount;
 
-import com.hz.Product;
 import com.hz.ShoppingCart;
 
 public class Calculator {
